@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mRC-YR-DpD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Related Artist Collection View Controller-->
+        <scene sceneID="8Bz-zW-nKK">
+            <objects>
+                <collectionViewController id="mRC-YR-DpD" customClass="RelatedArtistCollectionViewController" customModule="FluxxKitExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="iBI-W3-N7n">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.094117647060000004" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JFp-Tc-E6h">
+                            <size key="itemSize" width="128" height="160"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ArtistCell" id="BI8-2S-y85" customClass="RelatedArtistCollectionViewCell" customModule="FluxxKitExample" customModuleProvider="target">
+                                <rect key="frame" x="8" y="0.0" width="128" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="160"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tcm-1n-qNf">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="Tcm-1n-qNf" secondAttribute="height" multiplier="1:1" id="jHa-MO-q6C"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQi-RV-XQC">
+                                            <rect key="frame" x="0.0" y="128" width="128" height="32"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" red="0.094117647060000004" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Tcm-1n-qNf" firstAttribute="top" secondItem="BI8-2S-y85" secondAttribute="top" id="9TP-eV-mxf"/>
+                                    <constraint firstItem="Tcm-1n-qNf" firstAttribute="leading" secondItem="BI8-2S-y85" secondAttribute="leading" id="HRV-E4-Qde"/>
+                                    <constraint firstAttribute="trailing" secondItem="Tcm-1n-qNf" secondAttribute="trailing" id="I22-5z-4Mk"/>
+                                    <constraint firstItem="yQi-RV-XQC" firstAttribute="top" secondItem="Tcm-1n-qNf" secondAttribute="bottom" id="JDJ-3P-mVG"/>
+                                    <constraint firstAttribute="bottom" secondItem="yQi-RV-XQC" secondAttribute="bottom" id="h6O-Cu-9Uc"/>
+                                    <constraint firstAttribute="trailing" secondItem="yQi-RV-XQC" secondAttribute="trailing" id="tz6-GD-qwi"/>
+                                    <constraint firstItem="yQi-RV-XQC" firstAttribute="leading" secondItem="BI8-2S-y85" secondAttribute="leading" id="xMR-zb-ByE"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="artistNameLabel" destination="yQi-RV-XQC" id="0QQ-Lx-PLZ"/>
+                                    <outlet property="imageView" destination="Tcm-1n-qNf" id="kYq-zh-x40"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="mRC-YR-DpD" id="4AN-5F-8E5"/>
+                            <outlet property="delegate" destination="mRC-YR-DpD" id="Ef0-HU-QSK"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n0e-5q-em9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-175.19999999999999" y="188.45577211394306"/>
+        </scene>
+    </scenes>
+</document>

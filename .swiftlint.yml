@@ -1,0 +1,43 @@
+opt_in_rules:
+  - explicit_init
+  - force_unwrapping
+included:
+  - FluxxKitExample/
+  - FluxxKitExampleTests/
+reporter: "xcode"
+
+### autocorrectableなものはFatalエラー
+closing_brace: error
+colon: error
+comma: error
+explicit_init: error
+force_unwrapping: error
+leading_whitespace: error
+legacy_cggeometry_functions: error
+legacy_constant: error
+legacy_constructor: error
+legacy_nsgeometry_functions: error
+opening_brace: error
+return_arrow_whitespace: error
+statement_position: error
+trailing_newline: error
+trailing_semicolon: error
+trailing_whitespace: error
+vertical_whitespace: error
+
+line_length:
+  - 145
+  - 160
+identifier_name:
+  min_length:
+    error: 3
+  excluded:
+    - id
+    - a
+    - b
+    - c
+    - d
+    - e
+    - i
+    - n
+    - r

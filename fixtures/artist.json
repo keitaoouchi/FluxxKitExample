@@ -1,0 +1,33 @@
+{
+  "external_urls" : {
+    "spotify" : "https://open.spotify.com/artist/6FXMGgJwohJLUSr5nVlf9X"
+  },
+  "followers" : {
+    "href" : null,
+    "total" : 664864
+  },
+  "genres" : [ "downtempo", "electronic", "nu jazz", "trip hop" ],
+  "href" : "https://api.spotify.com/v1/artists/6FXMGgJwohJLUSr5nVlf9X",
+  "id" : "6FXMGgJwohJLUSr5nVlf9X",
+  "images" : [ {
+    "height" : 1335,
+    "url" : "https://i.scdn.co/image/c8bbeedb05f38ae5cb982a7daf4bf7129cca892c",
+    "width" : 1000
+  }, {
+    "height" : 855,
+    "url" : "https://i.scdn.co/image/52c2a824e84f4e8adf0b12418f9f8306b4b5b77a",
+    "width" : 640
+  }, {
+    "height" : 267,
+    "url" : "https://i.scdn.co/image/0d6b7677f8291c5158bdace8a6e027880c527c2a",
+    "width" : 200
+  }, {
+    "height" : 85,
+    "url" : "https://i.scdn.co/image/c055290bb6e97a589d8ca659cd452a8e9831c2c4",
+    "width" : 64
+  } ],
+  "name" : "Massive Attack",
+  "popularity" : 64,
+  "type" : "artist",
+  "uri" : "spotify:artist:6FXMGgJwohJLUSr5nVlf9X"
+}

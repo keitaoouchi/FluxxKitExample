@@ -1,0 +1,334 @@
+{
+  "album_type" : "album",
+  "artists" : [ {
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/artist/6FXMGgJwohJLUSr5nVlf9X"
+    },
+    "href" : "https://api.spotify.com/v1/artists/6FXMGgJwohJLUSr5nVlf9X",
+    "id" : "6FXMGgJwohJLUSr5nVlf9X",
+    "name" : "Massive Attack",
+    "type" : "artist",
+    "uri" : "spotify:artist:6FXMGgJwohJLUSr5nVlf9X"
+  } ],
+  "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "SE", "SG", "SK", "SV", "TR", "TW", "US", "UY" ],
+  "copyrights" : [ {
+    "text" : "(C) 1998 Virgin Records LtdThis label copy information is the subject of copyright protection. All rights reserved.(C) 1998 Virgin Records Ltd",
+    "type" : "C"
+  }, {
+    "text" : "(P) 1998 The copyright in this sound recording is owned by Virgin Records Ltd",
+    "type" : "P"
+  } ],
+  "external_ids" : {
+    "upc" : "00724384559953"
+  },
+  "external_urls" : {
+    "spotify" : "https://open.spotify.com/album/49MNmJhZQewjt06rpwp6QR"
+  },
+  "genres" : [ ],
+  "href" : "https://api.spotify.com/v1/albums/49MNmJhZQewjt06rpwp6QR",
+  "id" : "49MNmJhZQewjt06rpwp6QR",
+  "images" : [ {
+    "height" : 640,
+    "url" : "https://i.scdn.co/image/fb9b24b7060cc4f8b72cf25c0b35fb9661b1230b",
+    "width" : 640
+  }, {
+    "height" : 300,
+    "url" : "https://i.scdn.co/image/8b923b9f2ddf641d57b6fbeae3656eb4b71c636d",
+    "width" : 300
+  }, {
+    "height" : 64,
+    "url" : "https://i.scdn.co/image/57753f6dc925e49e76cd638fd8c5b08c619d66f7",
+    "width" : 64
+  } ],
+  "label" : "Circa",
+  "name" : "Mezzanine",
+  "popularity" : 61,
+  "release_date" : "1998-04-20",
+  "release_date_precision" : "day",
+  "tracks" : {
+    "href" : "https://api.spotify.com/v1/albums/49MNmJhZQewjt06rpwp6QR/tracks?offset=0&limit=50",
+    "items" : [ {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/6FXMGgJwohJLUSr5nVlf9X"
+        },
+        "href" : "https://api.spotify.com/v1/artists/6FXMGgJwohJLUSr5nVlf9X",
+        "id" : "6FXMGgJwohJLUSr5nVlf9X",
+        "name" : "Massive Attack",
+        "type" : "artist",
+        "uri" : "spotify:artist:6FXMGgJwohJLUSr5nVlf9X"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "SE", "SG", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 379533,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/7uv632EkfwYhXoqf8rhYrg"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/7uv632EkfwYhXoqf8rhYrg",
+      "id" : "7uv632EkfwYhXoqf8rhYrg",
+      "name" : "Angel",
+      "preview_url" : "https://p.scdn.co/mp3-preview/d8d069e27fd103a2fbb34fe9932dcbba686e31e1?cid=null",
+      "track_number" : 1,
+      "type" : "track",
+      "uri" : "spotify:track:7uv632EkfwYhXoqf8rhYrg"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/6FXMGgJwohJLUSr5nVlf9X"
+        },
+        "href" : "https://api.spotify.com/v1/artists/6FXMGgJwohJLUSr5nVlf9X",
+        "id" : "6FXMGgJwohJLUSr5nVlf9X",
+        "name" : "Massive Attack",
+        "type" : "artist",
+        "uri" : "spotify:artist:6FXMGgJwohJLUSr5nVlf9X"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "SE", "SG", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 298826,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/6ggJ6MceyHGWtUg1KLp3M1"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/6ggJ6MceyHGWtUg1KLp3M1",
+      "id" : "6ggJ6MceyHGWtUg1KLp3M1",
+      "name" : "Risingson",
+      "preview_url" : "https://p.scdn.co/mp3-preview/5ab45588f3c908f2aa8653f2f11dc80896d60cc6?cid=null",
+      "track_number" : 2,
+      "type" : "track",
+      "uri" : "spotify:track:6ggJ6MceyHGWtUg1KLp3M1"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/6FXMGgJwohJLUSr5nVlf9X"
+        },
+        "href" : "https://api.spotify.com/v1/artists/6FXMGgJwohJLUSr5nVlf9X",
+        "id" : "6FXMGgJwohJLUSr5nVlf9X",
+        "name" : "Massive Attack",
+        "type" : "artist",
+        "uri" : "spotify:artist:6FXMGgJwohJLUSr5nVlf9X"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "SE", "SG", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 330773,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/67Hna13dNDkZvBpTXRIaOJ"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/67Hna13dNDkZvBpTXRIaOJ",
+      "id" : "67Hna13dNDkZvBpTXRIaOJ",
+      "name" : "Teardrop",
+      "preview_url" : "https://p.scdn.co/mp3-preview/7b9c22dbd27bd948cb6a515bb79c19f1e73ffe1d?cid=null",
+      "track_number" : 3,
+      "type" : "track",
+      "uri" : "spotify:track:67Hna13dNDkZvBpTXRIaOJ"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/6FXMGgJwohJLUSr5nVlf9X"
+        },
+        "href" : "https://api.spotify.com/v1/artists/6FXMGgJwohJLUSr5nVlf9X",
+        "id" : "6FXMGgJwohJLUSr5nVlf9X",
+        "name" : "Massive Attack",
+        "type" : "artist",
+        "uri" : "spotify:artist:6FXMGgJwohJLUSr5nVlf9X"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "SE", "SG", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 357133,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/3N2UhXZI4Gf64Ku3cCjz2g"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/3N2UhXZI4Gf64Ku3cCjz2g",
+      "id" : "3N2UhXZI4Gf64Ku3cCjz2g",
+      "name" : "Inertia Creeps",
+      "preview_url" : "https://p.scdn.co/mp3-preview/05d469e1126d7a765bc4d14ecf05de6890d7571d?cid=null",
+      "track_number" : 4,
+      "type" : "track",
+      "uri" : "spotify:track:3N2UhXZI4Gf64Ku3cCjz2g"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/6FXMGgJwohJLUSr5nVlf9X"
+        },
+        "href" : "https://api.spotify.com/v1/artists/6FXMGgJwohJLUSr5nVlf9X",
+        "id" : "6FXMGgJwohJLUSr5nVlf9X",
+        "name" : "Massive Attack",
+        "type" : "artist",
+        "uri" : "spotify:artist:6FXMGgJwohJLUSr5nVlf9X"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "SE", "SG", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 251200,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/2HuMQkNVpFIsur2cRWWQmX"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/2HuMQkNVpFIsur2cRWWQmX",
+      "id" : "2HuMQkNVpFIsur2cRWWQmX",
+      "name" : "Exchange",
+      "preview_url" : "https://p.scdn.co/mp3-preview/651b3e796f36c45db312e99e6814b3b415b59450?cid=null",
+      "track_number" : 5,
+      "type" : "track",
+      "uri" : "spotify:track:2HuMQkNVpFIsur2cRWWQmX"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/6FXMGgJwohJLUSr5nVlf9X"
+        },
+        "href" : "https://api.spotify.com/v1/artists/6FXMGgJwohJLUSr5nVlf9X",
+        "id" : "6FXMGgJwohJLUSr5nVlf9X",
+        "name" : "Massive Attack",
+        "type" : "artist",
+        "uri" : "spotify:artist:6FXMGgJwohJLUSr5nVlf9X"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "SE", "SG", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 366893,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/0oeEqyEAavgPfFxDYvjAP6"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/0oeEqyEAavgPfFxDYvjAP6",
+      "id" : "0oeEqyEAavgPfFxDYvjAP6",
+      "name" : "Dissolved Girl",
+      "preview_url" : "https://p.scdn.co/mp3-preview/4ba1f1776c13cae0f7bf6664053e06b42095cad1?cid=null",
+      "track_number" : 6,
+      "type" : "track",
+      "uri" : "spotify:track:0oeEqyEAavgPfFxDYvjAP6"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/6FXMGgJwohJLUSr5nVlf9X"
+        },
+        "href" : "https://api.spotify.com/v1/artists/6FXMGgJwohJLUSr5nVlf9X",
+        "id" : "6FXMGgJwohJLUSr5nVlf9X",
+        "name" : "Massive Attack",
+        "type" : "artist",
+        "uri" : "spotify:artist:6FXMGgJwohJLUSr5nVlf9X"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "SE", "SG", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 356266,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/2Tz5THgkMOQeaW6DlqAlIa"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/2Tz5THgkMOQeaW6DlqAlIa",
+      "id" : "2Tz5THgkMOQeaW6DlqAlIa",
+      "name" : "Man Next Door",
+      "preview_url" : "https://p.scdn.co/mp3-preview/800ac0c6214640292ef5692e721a96185a1c9324?cid=null",
+      "track_number" : 7,
+      "type" : "track",
+      "uri" : "spotify:track:2Tz5THgkMOQeaW6DlqAlIa"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/6FXMGgJwohJLUSr5nVlf9X"
+        },
+        "href" : "https://api.spotify.com/v1/artists/6FXMGgJwohJLUSr5nVlf9X",
+        "id" : "6FXMGgJwohJLUSr5nVlf9X",
+        "name" : "Massive Attack",
+        "type" : "artist",
+        "uri" : "spotify:artist:6FXMGgJwohJLUSr5nVlf9X"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "SE", "SG", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 381666,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/1Rezzt36ybaT2ZbDZpv83D"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/1Rezzt36ybaT2ZbDZpv83D",
+      "id" : "1Rezzt36ybaT2ZbDZpv83D",
+      "name" : "Black Milk",
+      "preview_url" : "https://p.scdn.co/mp3-preview/6d2fa42069ea53bd89399d90467ea4d468e71a0d?cid=null",
+      "track_number" : 8,
+      "type" : "track",
+      "uri" : "spotify:track:1Rezzt36ybaT2ZbDZpv83D"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/6FXMGgJwohJLUSr5nVlf9X"
+        },
+        "href" : "https://api.spotify.com/v1/artists/6FXMGgJwohJLUSr5nVlf9X",
+        "id" : "6FXMGgJwohJLUSr5nVlf9X",
+        "name" : "Massive Attack",
+        "type" : "artist",
+        "uri" : "spotify:artist:6FXMGgJwohJLUSr5nVlf9X"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "SE", "SG", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 356800,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/4IfHYniNBoAATWV6iLEXRs"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/4IfHYniNBoAATWV6iLEXRs",
+      "id" : "4IfHYniNBoAATWV6iLEXRs",
+      "name" : "Mezzanine",
+      "preview_url" : "https://p.scdn.co/mp3-preview/530d61f944f3084b40d87690f1e607129bfcb92a?cid=null",
+      "track_number" : 9,
+      "type" : "track",
+      "uri" : "spotify:track:4IfHYniNBoAATWV6iLEXRs"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/6FXMGgJwohJLUSr5nVlf9X"
+        },
+        "href" : "https://api.spotify.com/v1/artists/6FXMGgJwohJLUSr5nVlf9X",
+        "id" : "6FXMGgJwohJLUSr5nVlf9X",
+        "name" : "Massive Attack",
+        "type" : "artist",
+        "uri" : "spotify:artist:6FXMGgJwohJLUSr5nVlf9X"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "SE", "SG", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 492266,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/0pWrU4My52DJ75GnZKDlv8"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/0pWrU4My52DJ75GnZKDlv8",
+      "id" : "0pWrU4My52DJ75GnZKDlv8",
+      "name" : "Group Four",
+      "preview_url" : "https://p.scdn.co/mp3-preview/08ff34fac9aa08087b302242cbf3aebfe1dc70d2?cid=null",
+      "track_number" : 10,
+      "type" : "track",
+      "uri" : "spotify:track:0pWrU4My52DJ75GnZKDlv8"
+    }, {
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/6FXMGgJwohJLUSr5nVlf9X"
+        },
+        "href" : "https://api.spotify.com/v1/artists/6FXMGgJwohJLUSr5nVlf9X",
+        "id" : "6FXMGgJwohJLUSr5nVlf9X",
+        "name" : "Massive Attack",
+        "type" : "artist",
+        "uri" : "spotify:artist:6FXMGgJwohJLUSr5nVlf9X"
+      } ],
+      "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "SE", "SG", "SK", "SV", "TR", "TW", "US", "UY" ],
+      "disc_number" : 1,
+      "duration_ms" : 250866,
+      "explicit" : false,
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/2A5Cl0fxSJDGs7SC3fryhR"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/2A5Cl0fxSJDGs7SC3fryhR",
+      "id" : "2A5Cl0fxSJDGs7SC3fryhR",
+      "name" : "(Exchange)",
+      "preview_url" : "https://p.scdn.co/mp3-preview/0e427ff14bd0ad9db964b09dac72bcc46e425207?cid=null",
+      "track_number" : 11,
+      "type" : "track",
+      "uri" : "spotify:track:2A5Cl0fxSJDGs7SC3fryhR"
+    } ],
+    "limit" : 50,
+    "next" : null,
+    "offset" : 0,
+    "previous" : null,
+    "total" : 11
+  },
+  "type" : "album",
+  "uri" : "spotify:album:49MNmJhZQewjt06rpwp6QR"
+}
