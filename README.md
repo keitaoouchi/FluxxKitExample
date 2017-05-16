@@ -19,4 +19,4 @@ carthage bootstrap --platform iOS
 
 ## GIF
 
-![GIF](https://cloud.githubusercontent.com/assets/1606842/24952663/3df81b0c-1fb3-11e7-888b-06f50fbad765.gif "GIF")
+![GIF](https://raw.githubusercontent.com/keitaoouchi/FluxxKitExample/master/sample.gif "GIF")
