@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Bb6-sq-duL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Bb6-sq-duL">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -17,7 +17,7 @@
         <!--Supplemental State View Controller-->
         <scene sceneID="3zO-zh-XSP">
             <objects>
-                <viewController id="Bb6-sq-duL" customClass="SupplementalStateViewController" customModule="AsIfSpotify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Bb6-sq-duL" customClass="SupplementalStateViewController" customModule="FluxxKitExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Y4U-oN-8WW"/>
                         <viewControllerLayoutGuide type="bottom" id="qz5-d5-vev"/>
@@ -25,7 +25,7 @@
                     <view key="view" contentMode="scaleToFill" id="uqY-Si-fmH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.094117647060000004" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="emptyView" destination="Gqx-4g-F8j" id="zca-cR-7WS"/>
@@ -54,7 +54,7 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUC-At-0tM">
-                            <rect key="frame" x="73" y="285" width="229" height="97"/>
+                            <rect key="frame" x="73" y="285.5" width="229" height="97"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwz-hi-PxI">
                                     <rect key="frame" x="0.0" y="0.0" width="228.5" height="44"/>
@@ -98,7 +98,7 @@
                         <constraint firstItem="gUC-At-0tM" firstAttribute="centerY" secondItem="ebn-us-8Fg" secondAttribute="centerY" id="S4M-3X-u5L"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" id="4Rv-QQ-U65" userLabel="INIT" customClass="SearchInitView" customModule="AsIfSpotify" customModuleProvider="target">
+                <view contentMode="scaleToFill" id="4Rv-QQ-U65" userLabel="INIT" customClass="SearchInitView" customModule="FluxxKitExample" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
