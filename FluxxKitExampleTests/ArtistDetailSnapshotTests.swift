@@ -28,7 +28,7 @@ final class ArtistDetailSnapshotTests: FBSnapshotTestCase {
 
 }
 
-// MARK: - アーティスト画像
+// MARK: - Image
 extension ArtistDetailSnapshotTests {
 
   func testRequestingImages() {
@@ -56,7 +56,7 @@ extension ArtistDetailSnapshotTests {
   }
 }
 
-// MARK: - リリース
+// MARK: - Releases
 extension ArtistDetailSnapshotTests {
 
   func testRequestingReleases() {
@@ -92,7 +92,7 @@ extension ArtistDetailSnapshotTests {
   }
 }
 
-// MARK: - 関連アーティスト
+// MARK: - Related Artists
 extension ArtistDetailSnapshotTests {
 
   func testRequestingRelatedArtists() {

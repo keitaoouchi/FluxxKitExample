@@ -39,7 +39,7 @@ extension SearchViewController {
 
 }
 
-// MARK: - 検索バー関連
+// MARK: - UISearchBarDelegate
 
 extension SearchViewController: UISearchBarDelegate {
 
@@ -75,7 +75,6 @@ private extension SearchViewController {
     self.albumCoverTableVC.didMove(toParentViewController: self)
   }
 
-  // MARK: - SearchBar <--> ViewController
   func bindSearchBar() {
     let searchBar = UISearchBar()
     searchBar.delegate = self
@@ -85,12 +84,10 @@ private extension SearchViewController {
     self.navigationItem.titleView = searchBar
   }
 
-  // MARK: - View <--> Store binding
   func bindStore() {
     self.supplementalVC.bind(state: store.state)
     self.albumCoverTableVC.bind(state: store.state)
 
-    // searchStateのシグナルに応じてTableViewとその他状態のViewを切り替える
     store
         .state
         .searchState
