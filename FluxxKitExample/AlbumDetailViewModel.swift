@@ -54,7 +54,7 @@ extension AlbumDetailViewModel {
 
   class StoreReducer: Reducer<AlbumDetailViewModel, Action> {
 
-    override func reduce(action: AlbumDetailViewModel.Action, to state: AlbumDetailViewModel) {
+    override func reduce(state: AlbumDetailViewModel, action: AlbumDetailViewModel.Action) {
       switch action {
 
       case .transition(let newState):

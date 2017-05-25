@@ -4,7 +4,7 @@ use_frameworks!
 target 'FluxxKitExample' do
   pod 'SwiftLint', '~> 0.17'
   pod 'R.swift'
-  pod 'FluxxKit', git: 'https://github.com/keitaoouchi/FluxxKit.git'
+  pod 'FluxxKit', '1.0.1'
   pod 'RxSwift'
   pod 'RxCocoa'
 

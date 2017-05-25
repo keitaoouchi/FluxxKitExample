@@ -4,14 +4,14 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - FluxxKit (1.0.0)
+  - FluxxKit (1.0.1)
   - Nimble (7.0.0)
-  - Nimble-Snapshots (4.4.0):
-    - Nimble-Snapshots/Core (= 4.4.0)
-  - Nimble-Snapshots/Core (4.4.0):
+  - Nimble-Snapshots (5.0.1):
+    - Nimble-Snapshots/Core (= 5.0.1)
+  - Nimble-Snapshots/Core (5.0.1):
     - FBSnapshotTestCase (~> 2.0)
-    - Nimble
-    - Quick
+    - Nimble (~> 7.0)
+    - Quick (~> 1.0)
   - Quick (1.1.0)
   - R.swift (3.2.0):
     - R.swift.Library (~> 3.0.2)
@@ -23,7 +23,7 @@ PODS:
 
 DEPENDENCIES:
   - FBSnapshotTestCase
-  - FluxxKit (from `https://github.com/keitaoouchi/FluxxKit.git`)
+  - FluxxKit (= 1.0.1)
   - Nimble
   - Nimble-Snapshots
   - Quick
@@ -32,20 +32,11 @@ DEPENDENCIES:
   - RxSwift
   - SwiftLint (~> 0.17)
 
-EXTERNAL SOURCES:
-  FluxxKit:
-    :git: https://github.com/keitaoouchi/FluxxKit.git
-
-CHECKOUT OPTIONS:
-  FluxxKit:
-    :commit: 2be4a78c37d52054ebf1a0f65c201d205f6e5418
-    :git: https://github.com/keitaoouchi/FluxxKit.git
-
 SPEC CHECKSUMS:
   FBSnapshotTestCase: '094f9f314decbabe373b87cc339bea235a63e07a'
-  FluxxKit: 1a3ceb985617bbc96866a4ba31c4634e8f809614
+  FluxxKit: eabc8fba4d09c5377e5b0d0eaa81fe9d9bb65aba
   Nimble: 874982b605d4d752fcac6be695d13c502de84b1b
-  Nimble-Snapshots: e743439f26c2fa99d8f7e0d7c01c99bcb40aa6f2
+  Nimble-Snapshots: d1c97dafab552cce732759d996ba99d7283894ac
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
   R.swift: 207a372a2b5977caef440c696a368009460641d1
   R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
@@ -53,6 +44,6 @@ SPEC CHECKSUMS:
   RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
   SwiftLint: b467d08f5b25dc3b3cfed243d8e1b74b91714c67
 
-PODFILE CHECKSUM: b301230269234acb77fe6493465581eef4fd0ddc
+PODFILE CHECKSUM: 1ce037941181156c04134155fbcd25c320cfebfd
 
 COCOAPODS: 1.2.1

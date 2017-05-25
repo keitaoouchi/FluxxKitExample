@@ -175,7 +175,7 @@ extension ArtistDetailViewModel {
   }
 
   class StoreReducer: Reducer<ArtistDetailViewModel, Action> {
-    override func reduce(action: ArtistDetailViewModel.Action, to state: ArtistDetailViewModel) {
+    override func reduce(state: ArtistDetailViewModel, action: ArtistDetailViewModel.Action) {
 
       switch action {
 

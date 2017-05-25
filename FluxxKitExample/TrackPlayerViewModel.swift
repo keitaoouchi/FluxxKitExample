@@ -1,7 +1,7 @@
 import FluxxKit
 import RxSwift
 
-final class TrackPlayerViewModel: StateType {
+struct TrackPlayerViewModel: StateType {
 
   var player = TrackPlayer()
 
@@ -39,7 +39,7 @@ extension TrackPlayerViewModel {
 
   class StoreReducer: Reducer<TrackPlayerViewModel, Action> {
 
-    override func reduce(action: TrackPlayerViewModel.Action, to state: TrackPlayerViewModel) {
+    override func reduce(state: TrackPlayerViewModel, action: TrackPlayerViewModel.Action) {
       switch action {
 
       case .show:
@@ -59,9 +59,9 @@ extension TrackPlayerViewModel {
 
       case .toggle(let newTrack):
         if newTrack.id == state.trackStream.value?.id {
-          reduce(action: .toggleCurrentTrack, to: state)
+          reduce(state: state, action: .toggleCurrentTrack)
         } else {
-          reduce(action: .play(track: newTrack), to: state)
+          reduce(state: state, action: .play(track: newTrack))
         }
 
       case .toggleCurrentTrack:

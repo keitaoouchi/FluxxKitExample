@@ -55,7 +55,7 @@ extension SearchViewModel: StateType {
 
   class StoreReducer: Reducer<SearchViewModel, Action> {
 
-    override func reduce(action: SearchViewModel.Action, to state: SearchViewModel) {
+    override func reduce(state: SearchViewModel, action: SearchViewModel.Action) {
       switch action {
       case .transition(let newState):
         state.searchState.value = newState
