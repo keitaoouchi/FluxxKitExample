@@ -36,7 +36,6 @@
 		FC2A57611E8A0F6700669BE6 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A57601E8A0F6700669BE6 /* Album.swift */; };
 		FC2A576B1E8A124100669BE6 /* IoniconsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2A57641E8A124100669BE6 /* IoniconsKit.framework */; };
 		FC2A576C1E8A124100669BE6 /* Just.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2A57651E8A124100669BE6 /* Just.framework */; };
-		FC2A57701E8A124100669BE6 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2A57691E8A124100669BE6 /* Result.framework */; };
 		FC2C0D371E8B989900152F2C /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2C0D361E8B989900152F2C /* Search.storyboard */; };
 		FC514F921E8DE49500784183 /* ExampleColors.clr in Resources */ = {isa = PBXBuildFile; fileRef = FC514F911E8DE49500784183 /* ExampleColors.clr */; };
 		FC8099C51E8C93DB00B91C3B /* SupplementalState.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8099C41E8C93DB00B91C3B /* SupplementalState.storyboard */; };
@@ -179,7 +178,6 @@
 				FC8B71351E8B85B8009F903E /* Himotoki.framework in Frameworks */,
 				FC2A576B1E8A124100669BE6 /* IoniconsKit.framework in Frameworks */,
 				FC2A576C1E8A124100669BE6 /* Just.framework in Frameworks */,
-				FC2A57701E8A124100669BE6 /* Result.framework in Frameworks */,
 				B6DDF9B168635723A004A6AA /* Pods_FluxxKitExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -672,7 +670,6 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/IoniconsKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Just.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Himotoki.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Hue.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
