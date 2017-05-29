@@ -25,7 +25,8 @@ extension SearchViewModel: StateType {
     case cancel
   }
 
-  class ThunkMiddleware: MiddlewareType {
+  // or something like AsyncActionCreator.search(keyword: String, in: store) is OK
+  class SearchMiddleware: MiddlewareType {
 
     func after(dispatch action: FluxxKit.ActionType, to store: StoreType) {
     }

@@ -4,7 +4,7 @@ use_frameworks!
 target 'FluxxKitExample' do
   pod 'SwiftLint', '~> 0.17'
   pod 'R.swift'
-  pod 'FluxxKit', '1.0.1'
+  pod 'FluxxKit', '~> 1.0.2'
   pod 'RxSwift'
   pod 'RxCocoa'
 
@@ -12,9 +12,6 @@ target 'FluxxKitExample' do
     inherit! :search_paths
 
     pod 'FBSnapshotTestCase'
-    pod 'Nimble-Snapshots'
-    pod 'Quick'
-    pod 'Nimble'
   end
 
 end

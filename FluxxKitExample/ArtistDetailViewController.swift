@@ -32,7 +32,7 @@ final class ArtistDetailViewController: UIViewController {
   let disposeBag = DisposeBag()
 
   deinit {
-    Dispatcher.shared.unregister(identifier: store.identifier)
+    Dispatcher.shared.unregister(store: store)
   }
 
 }

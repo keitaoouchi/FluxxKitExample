@@ -14,7 +14,7 @@ final class AlbumDetailSnapshotTests: FBSnapshotTestCase {
   override func setUp() {
     super.setUp()
     self.recordMode = false
-    Dispatcher.shared.unregister(middleware: AlbumDetailViewModel.ThunkMiddleware.self)
+    Dispatcher.shared.unregister(middleware: AlbumDetailViewModel.AsyncMiddleware.self)
 
     vc = UIStoryboard(
         name: "AlbumDetail",

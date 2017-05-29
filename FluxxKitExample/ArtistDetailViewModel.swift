@@ -56,7 +56,8 @@ extension ArtistDetailViewModel {
     case transition(type: TransitionType)
   }
 
-  class ThunkMiddleware: MiddlewareType {
+  // or something like AsyncActionCreator.requestImages(artist: Artist, in: store) is OK
+  class AsyncMiddleware: MiddlewareType {
 
     func before(dispatch action: FluxxKit.ActionType, to store: StoreType) {
     }

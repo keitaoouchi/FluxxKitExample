@@ -18,9 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 private extension AppDelegate {
   func registerMiddlewares() {
     let middlewares: [MiddlewareType] = [
-        SearchViewModel.ThunkMiddleware(),
-        AlbumDetailViewModel.ThunkMiddleware(),
-        ArtistDetailViewModel.ThunkMiddleware()
+        SearchViewModel.SearchMiddleware(),
+        AlbumDetailViewModel.AsyncMiddleware(),
+        ArtistDetailViewModel.AsyncMiddleware()
     ]
     middlewares.forEach { middleware in
       Dispatcher.shared.register(middleware: middleware)

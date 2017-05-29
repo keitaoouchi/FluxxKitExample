@@ -23,9 +23,10 @@ extension AlbumDetailViewModel {
     case transition(state: RequestState)
   }
 
-  class ThunkMiddleware: MiddlewareType {
+  // or something like AsyncActionCreator.request(album: Album, in: store) is OK
+  class AsyncMiddleware: MiddlewareType {
 
-    func before(dispatch action: FluxxKit.ActionType, to store: StoreType) {
+    func before(dispatch action: ActionType, to store: StoreType) {
     }
 
     func after(dispatch action: FluxxKit.ActionType, to store: StoreType) {

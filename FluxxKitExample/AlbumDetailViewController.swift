@@ -27,7 +27,7 @@ final class AlbumDetailViewController: UIViewController {
   )
 
   deinit {
-    Dispatcher.shared.unregister(identifier: store.identifier)
+    Dispatcher.shared.unregister(store: store)
   }
 }
 
