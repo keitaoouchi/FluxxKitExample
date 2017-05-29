@@ -1,11 +1,15 @@
 import AVFoundation
 import RxSwift
+import RxAudioVisual
 
 final class TrackPlayer {
 
   var trackStream = Variable<Track?>(nil)
   var state = Variable<State>(.ready)
-  private let disposeBag = DisposeBag()
+  var volume: Float = 1.0
+  private var player: AVPlayer?
+  private var readyToPlayObservable: Disposable?
+  private var didPlayToEndObservable: Disposable?
 
   enum State {
     case ready
@@ -13,23 +17,15 @@ final class TrackPlayer {
     case paused
   }
 
-  var volume: Float = 1.0
-  private var player: AVPlayer?
-
-  init() {
-    NotificationCenter.default.addObserver(
-      self,
-      selector: #selector(onFinishedAudioPlaying),
-      name: Notification.Name.AVPlayerItemDidPlayToEndTime,
-      object: nil
-    )
-  }
-
   deinit {
-    NotificationCenter.default.removeObserver(self)
+    self.readyToPlayObservable?.dispose()
+    self.didPlayToEndObservable?.dispose()
   }
 
   func stop() {
+    self.readyToPlayObservable?.dispose()
+    self.didPlayToEndObservable?.dispose()
+
     player?.pause()
     self.player = nil
     try? AVAudioSession.sharedInstance().setActive(false)
@@ -56,27 +52,53 @@ final class TrackPlayer {
   func play(track: Track) {
     guard let url = URL(string: track.previewUrl) else { return }
 
-    DispatchQueue.main.async {
-      try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-      try? AVAudioSession.sharedInstance().setActive(true)
-    }
+    if let asset = player?.currentItem?.asset as? AVURLAsset, url == asset.url {
+      DispatchQueue.main.async {
+        try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        try? AVAudioSession.sharedInstance().setActive(true)
 
-    if let asset = player?.currentItem?.asset as? AVURLAsset,
-       url == asset.url {
-      self.player?.play()
+        self.player?.play()
+        self.state.value = .playing
+      }
     } else {
-      let item = AVPlayerItem(url: url)
-      self.player = AVPlayer(playerItem: item)
-      self.player?.volume = self.volume
-      self.player?.play()
+      let asset = AVAsset(url: url)
+      self.readyToPlayObservable?.dispose()
+      self.readyToPlayObservable = asset
+        .rx
+        .playable
+        .filter { $0 == true }
+        .map { _ in AVPlayerItem(asset: asset) }
+        .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .userInitiated))
+        .observeOn(MainScheduler.instance)
+        .subscribe(onNext: { [weak self] playerItem in
+          guard let `self` = self else { return }
 
-      trackStream.value = track
+          self.trackStream.value = track
+          self.state.value = .playing
+
+          try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+          try? AVAudioSession.sharedInstance().setActive(true)
+
+          self.player = AVPlayer(playerItem: playerItem)
+          self.player?.volume = self.volume
+          self.player?.play()
+
+          self.bind(item: playerItem)
+        })
+
     }
-
-    state.value = .playing
   }
 
-  @objc func onFinishedAudioPlaying(notification: Notification) {
-    self.stop()
+  private func bind(item: AVPlayerItem) {
+    self.didPlayToEndObservable?.dispose()
+    self.didPlayToEndObservable = item
+      .rx
+      .didPlayToEnd
+      .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+      .observeOn(MainScheduler.instance)
+      .subscribe(onNext: { [weak self] _ in
+        self?.stop()
+      })
   }
+
 }

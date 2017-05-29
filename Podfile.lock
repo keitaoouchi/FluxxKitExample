@@ -8,6 +8,9 @@ PODS:
   - R.swift (3.2.0):
     - R.swift.Library (~> 3.0.2)
   - R.swift.Library (3.0.2)
+  - RxAudioVisual (0.0.1):
+    - RxCocoa (~> 3.0)
+    - RxSwift (~> 3.0)
   - RxCocoa (3.4.1):
     - RxSwift (~> 3.4)
   - RxSwift (3.4.1)
@@ -17,19 +20,31 @@ DEPENDENCIES:
   - FBSnapshotTestCase
   - FluxxKit (~> 1.0.2)
   - R.swift
+  - RxAudioVisual (from `https://github.com/keitaoouchi/RxAudioVisual.git`, branch `master`)
   - RxCocoa
   - RxSwift
   - SwiftLint (~> 0.17)
+
+EXTERNAL SOURCES:
+  RxAudioVisual:
+    :branch: master
+    :git: https://github.com/keitaoouchi/RxAudioVisual.git
+
+CHECKOUT OPTIONS:
+  RxAudioVisual:
+    :commit: 86bd09b27ce3f208ba7ccf50aa0a92c7a669117a
+    :git: https://github.com/keitaoouchi/RxAudioVisual.git
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: '094f9f314decbabe373b87cc339bea235a63e07a'
   FluxxKit: 18abbe52fe96410d90dcf97da2e9f062ef81eee4
   R.swift: 207a372a2b5977caef440c696a368009460641d1
   R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
+  RxAudioVisual: ff42e2acc6aa724c5aedeea6cec428f285c52ba9
   RxCocoa: a8a5f1d061d0043e28f56976829f31ce63e8eb09
   RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
   SwiftLint: 3537a05b34060e78e7510f04fb7537d738247803
 
-PODFILE CHECKSUM: e14e1a2c5bb526320f7f211b9f400433569883e7
+PODFILE CHECKSUM: c53067f715ea298540cfeed9b0c5ad820145bad4
 
 COCOAPODS: 1.2.1
