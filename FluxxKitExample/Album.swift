@@ -35,7 +35,7 @@ extension Album {
       let encodedKeyword = keyword.addingPercentEncoding(withAllowedCharacters: CharacterSet.alphanumerics) ?? keyword
       let url = "https://api.spotify.com/v1/search?q=\(encodedKeyword)&type=album&market=JP"
 
-      let req = Just.get(url) { r in
+      let req = Just.get(url, headers: Authentication.shared.requestHeader) { r in
         if r.ok {
           if let json = r.json,
              let albums: [Album] = try? decodeArray(json, rootKeyPath: ["albums", "items"]) {
@@ -57,7 +57,7 @@ extension Album {
   static func fetch(by artist: Artist) -> Observable<[Album]> {
     return Observable.create { observer in
       let url = "\(artist.url)/albums?album_type=album,single&market=JP"
-      let req = Just.get(url) { r in
+      let req = Just.get(url, headers: Authentication.shared.requestHeader) { r in
         if r.ok {
           if let json = r.json,
              let albums: [Album] = try? decodeArray(json, rootKeyPath: "items") {

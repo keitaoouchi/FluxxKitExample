@@ -23,7 +23,6 @@
 		DE7A940E1E8F676E00BE2B88 /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7A940D1E8F676E00BE2B88 /* TrackTableViewCell.swift */; };
 		DE7A94101E8F684800BE2B88 /* TrackTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE7A940F1E8F684800BE2B88 /* TrackTable.storyboard */; };
 		DE7A94121E8FCF3500BE2B88 /* ArtistDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE7A94111E8FCF3500BE2B88 /* ArtistDetail.storyboard */; };
-		DED4B1DE1E97EA9A00545D39 /* SearchInitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED4B1DD1E97EA9A00545D39 /* SearchInitView.swift */; };
 		DEDC22611E8FE85D0052A6FC /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDC22601E8FE85D0052A6FC /* Track.swift */; };
 		DEDC22631E8FF6600052A6FC /* AlbumDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDC22621E8FF6600052A6FC /* AlbumDetailViewModel.swift */; };
 		DEDC22651E9002140052A6FC /* RequestSupplementalState.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDC22641E9002140052A6FC /* RequestSupplementalState.storyboard */; };
@@ -67,6 +66,8 @@
 		FCC713841E8CE20400B1F869 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC713831E8CE20400B1F869 /* Kingfisher.framework */; };
 		FCC713861E8CEA4200B1F869 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC713851E8CEA4200B1F869 /* Artist.swift */; };
 		FCE6F51F1EC2E2BE00BA4B7F /* TrackPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE6F51E1EC2E2BE00BA4B7F /* TrackPlayer.swift */; };
+		FCEC4FA41EE8E4CB0093FF74 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEC4FA31EE8E4CB0093FF74 /* Authentication.swift */; };
+		FCEC4FAC1EE905BE0093FF74 /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEC4FAB1EE905BE0093FF74 /* OAuthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,7 +115,6 @@
 		DE7A940D1E8F676E00BE2B88 /* TrackTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
 		DE7A940F1E8F684800BE2B88 /* TrackTable.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TrackTable.storyboard; sourceTree = "<group>"; };
 		DE7A94111E8FCF3500BE2B88 /* ArtistDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ArtistDetail.storyboard; sourceTree = "<group>"; };
-		DED4B1DD1E97EA9A00545D39 /* SearchInitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchInitView.swift; sourceTree = "<group>"; };
 		DEDC22601E8FE85D0052A6FC /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		DEDC22621E8FF6600052A6FC /* AlbumDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewModel.swift; sourceTree = "<group>"; };
 		DEDC22641E9002140052A6FC /* RequestSupplementalState.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RequestSupplementalState.storyboard; sourceTree = "<group>"; };
@@ -166,6 +166,8 @@
 		FCC713831E8CE20400B1F869 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		FCC713851E8CEA4200B1F869 /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		FCE6F51E1EC2E2BE00BA4B7F /* TrackPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackPlayer.swift; sourceTree = "<group>"; };
+		FCEC4FA31EE8E4CB0093FF74 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		FCEC4FAB1EE905BE0093FF74 /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,14 +214,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DED4B1DC1E97EA4000545D39 /* Custom */ = {
-			isa = PBXGroup;
-			children = (
-				DED4B1DD1E97EA9A00545D39 /* SearchInitView.swift */,
-			);
-			name = Custom;
-			sourceTree = "<group>";
-		};
 		FC23D6CB1E8A5ABC00587071 /* Error */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +235,7 @@
 				FC2A575C1E8A0E5200669BE6 /* SupplementalStateViewController.swift */,
 				FCBC9B2B1E9B55EE00E1DB1A /* TrackPlayerViewController.swift */,
 				DE7A940B1E8F674900BE2B88 /* TrackTableViewController.swift */,
+				FCEC4FAB1EE905BE0093FF74 /* OAuthViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -275,7 +270,6 @@
 			children = (
 				FCBC9B2F1E9B58B200E1DB1A /* Xib */,
 				FCC7137E1E8CDEE500B1F869 /* Cell */,
-				DED4B1DC1E97EA4000545D39 /* Custom */,
 				FC23D6CF1E8A5B3200587071 /* StoryBoard */,
 			);
 			name = View;
@@ -300,6 +294,7 @@
 				FCC713811E8CE05300B1F869 /* Image.swift */,
 				DEDC22601E8FE85D0052A6FC /* Track.swift */,
 				FCE6F51E1EC2E2BE00BA4B7F /* TrackPlayer.swift */,
+				FCEC4FA31EE8E4CB0093FF74 /* Authentication.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -721,7 +716,6 @@
 				FC8B71331E8B342B009F903E /* SearchViewModel.swift in Sources */,
 				FC2A575F1E8A0EDA00669BE6 /* AlbumCardViewController.swift in Sources */,
 				FCC713801E8CDF0300B1F869 /* AlbumCoverTableViewCell.swift in Sources */,
-				DED4B1DE1E97EA9A00545D39 /* SearchInitView.swift in Sources */,
 				DE5184421E96A1A100C26558 /* RelatedArtistCollectionViewCell.swift in Sources */,
 				FCC713741E8C9A3300B1F869 /* R.generated.swift in Sources */,
 				FC8B3DFB1E89F3A1002A2969 /* AppDelegate.swift in Sources */,
@@ -733,6 +727,7 @@
 				DE51843A1E96981B00C26558 /* CoverCollectionViewController.swift in Sources */,
 				FCC713771E8C9D6300B1F869 /* UIView.swift in Sources */,
 				DEDC22631E8FF6600052A6FC /* AlbumDetailViewModel.swift in Sources */,
+				FCEC4FA41EE8E4CB0093FF74 /* Authentication.swift in Sources */,
 				FCBC9B2D1E9B55EE00E1DB1A /* TrackPlayerViewController.swift in Sources */,
 				DE5184361E9679A800C26558 /* ArtistDetailViewModel.swift in Sources */,
 				DE5184341E9673A200C26558 /* ArtistDetailViewController.swift in Sources */,
@@ -742,6 +737,7 @@
 				DE224DAB1E8F4043002D8193 /* AlbumDetailViewController.swift in Sources */,
 				DE51843C1E96998000C26558 /* CoverCollectionViewCell.swift in Sources */,
 				FCBC9B2A1E9B46E400E1DB1A /* TrackPlayerViewModel.swift in Sources */,
+				FCEC4FAC1EE905BE0093FF74 /* OAuthViewController.swift in Sources */,
 				DE7A940C1E8F674900BE2B88 /* TrackTableViewController.swift in Sources */,
 				DE5184401E96A10800C26558 /* RelatedArtistCollectionViewController.swift in Sources */,
 				FC23D6CD1E8A5AC900587071 /* APIError.swift in Sources */,

@@ -56,7 +56,7 @@ extension Track {
   static func getAll(from album: Album) -> Observable<[Track]> {
     return Observable.create { observer in
       let url = "https://api.spotify.com/v1/albums/\(album.id)"
-      let req = Just.get(url) { r in
+      let req = Just.get(url, headers: Authentication.shared.requestHeader) { r in
         if r.ok {
           if let json = r.json,
              let tracks: [Track] = try? decodeArray(json, rootKeyPath: ["tracks", "items"]) {

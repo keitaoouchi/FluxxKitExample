@@ -4,8 +4,11 @@ import RxSwift
 final class SupplementalStateViewController: UIViewController {
   @IBOutlet var loadingView: UIView!
   @IBOutlet var failedView: UIView!
-  @IBOutlet var initView: SearchInitView!
+  @IBOutlet var initView: UIView!
   @IBOutlet var emptyView: UIView!
+  @IBOutlet weak var spotifyButton: UIButton!
+  @IBOutlet weak var signoutButton: UIButton!
+
   let disposeBag = DisposeBag()
 }
 
@@ -15,7 +18,8 @@ extension SupplementalStateViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.initView.spotifyButton.addTarget(self, action: #selector(openSpotify), for: .touchUpInside)
+    self.spotifyButton.addTarget(self, action: #selector(openSpotify), for: .touchUpInside)
+    self.signoutButton.addTarget(self, action: #selector(signout), for: .touchUpInside)
   }
 }
 
@@ -49,6 +53,12 @@ extension SupplementalStateViewController {
       UIApplication.shared.open(url)
     }
   }
+
+  @objc func signout() {
+    Authentication.shared.invalidate()
+  }
+
+
 }
 
 private extension SupplementalStateViewController {

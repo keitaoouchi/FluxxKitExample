@@ -7,6 +7,8 @@ target 'FluxxKitExample' do
   pod 'FluxxKit', '~> 1.0.2'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RxAudioVisual'
+  pod 'KeychainAccess'
 
   target 'FluxxKitExampleTests' do
     inherit! :search_paths
