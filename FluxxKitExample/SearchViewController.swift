@@ -1,6 +1,7 @@
 import UIKit
 import FluxxKit
 import RxSwift
+import WebKit
 
 final class SearchViewController: UIViewController {
   @IBOutlet weak var containerView: UIView!
@@ -26,6 +27,12 @@ extension SearchViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.setup()
+
+    Authentication.shared.valid.asObservable().subscribe(onNext: { isValid in
+      if !isValid {
+        self.present(OAuthViewController(), animated: true, completion: nil)
+      }
+    }).addDisposableTo(self.disposeBag)
 
     Dispatcher.shared.dispatch(action: SearchViewModel.Action.cancel)
   }

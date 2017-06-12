@@ -29,7 +29,7 @@ extension Artist {
   static func fetchRelatedArtists(for artist: Artist) -> Observable<[Artist]> {
     return Observable.create { observer in
       let url = "\(artist.url)/related-artists"
-      let req = Just.get(url) { r in
+      let req = Just.get(url, headers: Authentication.shared.requestHeader) { r in
         if r.ok {
           if let json = r.json,
              let artists: [Artist] = try? decodeArray(json, rootKeyPath: "artists") {
@@ -49,7 +49,7 @@ extension Artist {
 
   func getImages() -> Observable<[Image]> {
     return Observable.create { observer in
-      let req = Just.get(self.url) { r in
+      let req = Just.get(self.url, headers: Authentication.shared.requestHeader) { r in
         if r.ok {
           if let json = r.json,
              let images: [Image] = try? decodeArray(json, rootKeyPath: "images") {

@@ -54,39 +54,38 @@ final class TrackPlayer {
 
     if let asset = player?.currentItem?.asset as? AVURLAsset, url == asset.url {
       DispatchQueue.main.async {
-        try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+
         try? AVAudioSession.sharedInstance().setActive(true)
 
         self.player?.play()
         self.state.value = .playing
       }
     } else {
-      let asset = AVAsset(url: url)
-      self.readyToPlayObservable?.dispose()
-      self.readyToPlayObservable = asset
-        .rx
-        .playable
-        .filter { $0 == true }
-        .map { _ in AVPlayerItem(asset: asset) }
-        .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .userInitiated))
-        .observeOn(MainScheduler.instance)
-        .subscribe(onNext: { [weak self] playerItem in
-          guard let `self` = self else { return }
+      let item = AVPlayerItem(url: url)
+      let player = AVPlayer(playerItem: item)
 
-          self.trackStream.value = track
-          self.state.value = .playing
-
-          try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-          try? AVAudioSession.sharedInstance().setActive(true)
-
-          self.player = AVPlayer(playerItem: playerItem)
-          self.player?.volume = self.volume
-          self.player?.play()
-
-          self.bind(item: playerItem)
-        })
-
+      self.bind(player: player)
+      self.bind(item: item)
+      self.trackStream.value = track
     }
+  }
+
+  private func bind(player: AVPlayer) {
+    self.readyToPlayObservable?.dispose()
+    self.readyToPlayObservable = player.rx.status.filter { $0 == .readyToPlay }
+      .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .default))
+      .observeOn(MainScheduler.instance)
+      .subscribe(onNext: { [weak self] _ in
+        guard let `self` = self else { return }
+
+        self.state.value = .playing
+
+        try? AVAudioSession.sharedInstance().setActive(true)
+
+        player.volume = self.volume
+        player.play()
+        self.player = player
+      })
   }
 
   private func bind(item: AVPlayerItem) {
