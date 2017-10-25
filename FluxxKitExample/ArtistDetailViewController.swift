@@ -97,7 +97,7 @@ private extension ArtistDetailViewController {
         default:
           break
         }
-      }).addDisposableTo(self.disposeBag)
+      }).disposed(by: self.disposeBag)
 
     state
       .albumsRequestState
@@ -116,7 +116,7 @@ private extension ArtistDetailViewController {
           self?.albumsContainerView.fill(with: self?.albumVC.view)
           self?.albumVC.collectionView?.reloadData()
         }
-      }).addDisposableTo(self.disposeBag)
+      }).disposed(by: self.disposeBag)
 
     state
       .singlesRequestState
@@ -135,7 +135,7 @@ private extension ArtistDetailViewController {
           self?.singlesContainerView.fill(with: self?.singleVC.view)
           self?.singleVC.collectionView?.reloadData()
         }
-      }).addDisposableTo(self.disposeBag)
+      }).disposed(by: self.disposeBag)
 
     state
       .relatedArtistsRequestState
@@ -154,7 +154,7 @@ private extension ArtistDetailViewController {
           self?.relatedArtistsContainerView.fill(with: self?.artistsVC.view)
           self?.artistsVC.collectionView?.reloadData()
         }
-      }).addDisposableTo(self.disposeBag)
+      }).disposed(by: self.disposeBag)
   }
 }
 

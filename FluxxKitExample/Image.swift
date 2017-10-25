@@ -6,7 +6,7 @@ struct Image {
   let width: Int
 }
 
-extension Image: Decodable {
+extension Image: Himotoki.Decodable {
   static func decode(_ e: Extractor) throws -> Image {
     return try Image(url: e <| "url", height: e <| "height", width: e <| "width")
   }

@@ -25,7 +25,7 @@ extension AlbumCardViewController {
         self?.albums = albums
         self?.tableView.reloadData()
       }
-    }).addDisposableTo(self.disposeBag)
+    }).disposed(by: self.disposeBag)
   }
 }
 

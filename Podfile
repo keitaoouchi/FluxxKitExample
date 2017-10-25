@@ -4,8 +4,8 @@ use_frameworks!
 target 'FluxxKitExample' do
   pod 'SwiftLint', '~> 0.17'
   pod 'R.swift'
-  pod 'FluxxKit', '~> 1.0.2'
-  pod 'RxSwift'
+  pod 'FluxxKit', '~> 1.1.0'
+  pod 'RxSwift', '~> 4.0'
   pod 'RxCocoa'
   pod 'RxAudioVisual'
   pod 'KeychainAccess'

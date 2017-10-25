@@ -27,7 +27,7 @@ extension TrackTableViewController {
         self?.tableView.reloadData()
         self?.onLoad?()
       }
-    }).addDisposableTo(self.disposeBag)
+    }).disposed(by: self.disposeBag)
   }
 
   func bind(state: TrackPlayerViewModel) {
@@ -52,7 +52,7 @@ extension TrackTableViewController {
           rows.append(IndexPath(row: index, section: 0))
         }
         self?.tableView.reloadRows(at: rows, with: UITableViewRowAnimation.automatic)
-      }).addDisposableTo(self.disposeBag)
+      }).disposed(by: self.disposeBag)
   }
 }
 

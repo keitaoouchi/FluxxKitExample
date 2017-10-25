@@ -11,7 +11,6 @@ final class AlbumDetailViewController: UIViewController {
   @IBOutlet weak var containerView: UIView!
   @IBOutlet weak var containerViewHeight: NSLayoutConstraint!
 
-  // swiftlint:disable:next force_cast
   var album: Album!
   // swiftlint:disable:next force_unwrapping
   let supplementalVC = R.storyboard.requestSupplementalState.instantiateInitialViewController()!
@@ -133,7 +132,7 @@ private extension AlbumDetailViewController {
       default:
         self?.containerView.fill(with: self?.supplementalVC.view)
       }
-    }).addDisposableTo(self.disposeBag)
+    }).disposed(by: self.disposeBag)
   }
 
   func bind(state: TrackPlayerViewModel) {
@@ -159,7 +158,7 @@ private extension AlbumDetailViewController {
           self?.hidePlayer()
         }
       }
-    }).addDisposableTo(self.disposeBag)
+    }).disposed(by: self.disposeBag)
   }
 }
 

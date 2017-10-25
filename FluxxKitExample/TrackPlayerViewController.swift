@@ -68,7 +68,7 @@ extension TrackPlayerViewController {
 
               }
             }
-        ).addDisposableTo(self.disposeBag)
+        ).disposed(by: self.disposeBag)
   }
 
 }

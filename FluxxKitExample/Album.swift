@@ -12,7 +12,7 @@ struct Album {
   let spotifyUrl: String?
 }
 
-extension Album: Decodable {
+extension Album: Himotoki.Decodable {
   static func decode(_ e: Extractor) throws -> Album {
     return try Album(
         id: e <| "id",

@@ -10,7 +10,7 @@ struct Artist {
   let images: [Image]?
 }
 
-extension Artist: Decodable {
+extension Artist: Himotoki.Decodable {
   static func decode(_ e: Extractor) throws -> Artist {
     return try Artist(
         id: e <| "id",

@@ -45,7 +45,7 @@ extension SupplementalStateViewController {
                 break
               }
             }
-        ).addDisposableTo(self.disposeBag)
+        ).disposed(by: self.disposeBag)
   }
 
   @objc func openSpotify() {

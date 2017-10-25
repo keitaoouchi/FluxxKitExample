@@ -29,7 +29,7 @@ extension RequestSupplementalStateViewController {
       default:
         break
       }
-    }).addDisposableTo(self.disposeBag)
+    }).disposed(by: self.disposeBag)
   }
 
 }
