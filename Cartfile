@@ -1,5 +1,5 @@
 github "JustHTTP/Just" ~> 0.5
-github "ikesyo/Himotoki" ~> 3.0
+github "ikesyo/Himotoki" ~> 4.0
 github "keitaoouchi/IoniconsKit"
 github "hyperoslo/Hue"
 github "onevcat/Kingfisher" ~> 3.0

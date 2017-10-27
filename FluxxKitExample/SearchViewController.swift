@@ -32,7 +32,7 @@ extension SearchViewController {
       if !isValid {
         self.present(OAuthViewController(), animated: true, completion: nil)
       }
-    }).addDisposableTo(self.disposeBag)
+    }).disposed(by: self.disposeBag)
 
     Dispatcher.shared.dispatch(action: SearchViewModel.Action.cancel)
   }
@@ -107,7 +107,7 @@ private extension SearchViewController {
           default:
             self?.containerView.fill(with: self?.supplementalVC.view)
           }
-        }).addDisposableTo(self.disposeBag)
+        }).disposed(by: self.disposeBag)
   }
 
 }

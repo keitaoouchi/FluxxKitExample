@@ -37,7 +37,7 @@ struct Track {
 
 }
 
-extension Track: Decodable {
+extension Track: Himotoki.Decodable {
   static func decode(_ e: Extractor) throws -> Track {
     return try Track(
         id: e <| "id",

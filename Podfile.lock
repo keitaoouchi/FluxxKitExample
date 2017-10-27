@@ -4,40 +4,40 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - FluxxKit (1.0.2)
-  - KeychainAccess (3.0.2)
-  - R.swift (3.3.0):
-    - R.swift.Library (~> 3.0.2)
-  - R.swift.Library (3.0.2)
-  - RxAudioVisual (1.0.1):
-    - RxCocoa (~> 3.4)
-    - RxSwift (~> 3.4)
-  - RxCocoa (3.5.0):
-    - RxSwift (~> 3.4)
-  - RxSwift (3.5.0)
-  - SwiftLint (0.19.0)
+  - FluxxKit (1.1.0)
+  - KeychainAccess (3.1.0)
+  - R.swift (4.0.0):
+    - R.swift.Library (~> 4.0.0)
+  - R.swift.Library (4.0.0)
+  - RxAudioVisual (1.1.0):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxCocoa (4.0.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.0.0)
+  - SwiftLint (0.23.1)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
-  - FluxxKit (~> 1.0.2)
+  - FluxxKit (~> 1.1.0)
   - KeychainAccess
   - R.swift
   - RxAudioVisual
   - RxCocoa
-  - RxSwift
+  - RxSwift (~> 4.0)
   - SwiftLint (~> 0.17)
 
 SPEC CHECKSUMS:
-  FBSnapshotTestCase: '094f9f314decbabe373b87cc339bea235a63e07a'
-  FluxxKit: 18abbe52fe96410d90dcf97da2e9f062ef81eee4
-  KeychainAccess: a986406022dfc7c634c691ad3bec670cc6a32002
-  R.swift: bde9704d50ff36820f49e266bc88ef545e1e9b36
-  R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
-  RxAudioVisual: c2ab678461a07172890d1e8a20334ec8e62ea8a4
-  RxCocoa: a0a09f45d0e5b48ecb6a4a7b4b4c89c88d3f633f
-  RxSwift: 18ee9d78b45edb3b0b7e79916b47a116e6dbc842
-  SwiftLint: 3537a05b34060e78e7510f04fb7537d738247803
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  FluxxKit: b1e59a46cc9d94b2693a331523429f858ebc59a8
+  KeychainAccess: 94c5540b32eabf7bc32bfb976a268e8ea05fd6da
+  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
+  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
+  RxAudioVisual: f327caa44be55dcfbff130a19ee5f6bf4c354e42
+  RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
+  SwiftLint: 1b670ce79284c76520f84060e87d645078fd32fa
 
-PODFILE CHECKSUM: 905b9f9eae366e964a4cc7acc79c973774a88675
+PODFILE CHECKSUM: ee6b0fbebcca131265a50562f66f1730f7778822
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.3.1
