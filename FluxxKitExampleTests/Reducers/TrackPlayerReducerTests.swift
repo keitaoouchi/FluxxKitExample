@@ -19,7 +19,7 @@ struct TrackPlayerReducerTests {
 
     @Test func playSetsCurrent() {
         let state = TrackPlayerState()
-        let (newState, _) = trackPlayerReducer.reduce(state, .play(sampleTrack), .unused)
+        let (newState, _) = trackPlayerReducer.reduce(state, .play(sampleTrack))
         #expect(newState.currentTrack?.id == "1")
         #expect(newState.playerPhase == .playing)
         #expect(newState.visibility == .showing)
@@ -29,7 +29,7 @@ struct TrackPlayerReducerTests {
         var state = TrackPlayerState()
         state.currentTrack = sampleTrack
         state.playerPhase = .playing
-        let (newState, _) = trackPlayerReducer.reduce(state, .pause, .unused)
+        let (newState, _) = trackPlayerReducer.reduce(state, .pause)
         #expect(newState.playerPhase == .paused)
     }
 
@@ -37,7 +37,7 @@ struct TrackPlayerReducerTests {
         var state = TrackPlayerState()
         state.currentTrack = sampleTrack
         state.playerPhase = .paused
-        let (newState, _) = trackPlayerReducer.reduce(state, .resume, .unused)
+        let (newState, _) = trackPlayerReducer.reduce(state, .resume)
         #expect(newState.playerPhase == .playing)
     }
 
@@ -46,7 +46,7 @@ struct TrackPlayerReducerTests {
         state.currentTrack = sampleTrack
         state.playerPhase = .playing
         state.visibility = .showing
-        let (newState, _) = trackPlayerReducer.reduce(state, .stop, .unused)
+        let (newState, _) = trackPlayerReducer.reduce(state, .stop)
         #expect(newState.playerPhase == .ready)
         #expect(newState.visibility == .hidden)
         #expect(newState.currentTrack == nil)
@@ -56,7 +56,7 @@ struct TrackPlayerReducerTests {
         var state = TrackPlayerState()
         state.currentTrack = sampleTrack
         state.playerPhase = .playing
-        let (newState, _) = trackPlayerReducer.reduce(state, .toggle(sampleTrack), .unused)
+        let (newState, _) = trackPlayerReducer.reduce(state, .toggle(sampleTrack))
         #expect(newState.playerPhase == .paused)
     }
 
@@ -64,7 +64,7 @@ struct TrackPlayerReducerTests {
         var state = TrackPlayerState()
         state.currentTrack = sampleTrack
         state.playerPhase = .paused
-        let (newState, _) = trackPlayerReducer.reduce(state, .toggle(sampleTrack), .unused)
+        let (newState, _) = trackPlayerReducer.reduce(state, .toggle(sampleTrack))
         #expect(newState.playerPhase == .playing)
     }
 
@@ -72,7 +72,7 @@ struct TrackPlayerReducerTests {
         var state = TrackPlayerState()
         state.currentTrack = sampleTrack
         state.playerPhase = .playing
-        let (newState, _) = trackPlayerReducer.reduce(state, .toggle(otherTrack), .unused)
+        let (newState, _) = trackPlayerReducer.reduce(state, .toggle(otherTrack))
         #expect(newState.currentTrack?.id == "2")
         #expect(newState.playerPhase == .playing)
     }
@@ -81,7 +81,7 @@ struct TrackPlayerReducerTests {
         var state = TrackPlayerState()
         state.currentTrack = sampleTrack
         state.playerPhase = .playing
-        let (newState, _) = trackPlayerReducer.reduce(state, .toggleCurrent, .unused)
+        let (newState, _) = trackPlayerReducer.reduce(state, .toggleCurrent)
         #expect(newState.playerPhase == .paused)
     }
 
@@ -89,15 +89,15 @@ struct TrackPlayerReducerTests {
         var state = TrackPlayerState()
         state.currentTrack = sampleTrack
         state.playerPhase = .paused
-        let (newState, _) = trackPlayerReducer.reduce(state, .toggleCurrent, .unused)
+        let (newState, _) = trackPlayerReducer.reduce(state, .toggleCurrent)
         #expect(newState.playerPhase == .playing)
     }
 
     @Test func showAndHide() {
         let state = TrackPlayerState()
-        let (shown, _) = trackPlayerReducer.reduce(state, .show, .unused)
+        let (shown, _) = trackPlayerReducer.reduce(state, .show)
         #expect(shown.visibility == .showing)
-        let (hidden, _) = trackPlayerReducer.reduce(shown, .hide, .unused)
+        let (hidden, _) = trackPlayerReducer.reduce(shown, .hide)
         #expect(hidden.visibility == .hidden)
     }
 
@@ -105,7 +105,7 @@ struct TrackPlayerReducerTests {
         var state = TrackPlayerState()
         state.currentTrack = sampleTrack
         state.playerPhase = .playing
-        let (newState, _) = trackPlayerReducer.reduce(state, .playbackEnded, .unused)
+        let (newState, _) = trackPlayerReducer.reduce(state, .playbackEnded)
         #expect(newState.playerPhase == .ready)
     }
 }

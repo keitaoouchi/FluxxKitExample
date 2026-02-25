@@ -7,7 +7,7 @@ struct SearchReducerTests {
 
     @Test func searchTransitionsToSearching() {
         let state = SearchState()
-        let (newState, effect) = searchReducer.reduce(state, .search(keyword: "test"), .unused)
+        let (newState, effect) = searchReducer.reduce(state, .search(keyword: "test"))
         #expect(newState.phase == .searching)
         if case .none = effect {
             Issue.record("Expected .run effect")
@@ -20,7 +20,7 @@ struct SearchReducerTests {
         let albums = [
             Album(id: "1", type: "album", title: "Test", images: [], artists: [], url: "", externalUrls: nil)
         ]
-        let (newState, _) = searchReducer.reduce(state, .loaded(albums), .unused)
+        let (newState, _) = searchReducer.reduce(state, .loaded(albums))
         #expect(newState.phase == .loaded)
         #expect(newState.albums.count == 1)
     }
@@ -28,7 +28,7 @@ struct SearchReducerTests {
     @Test func loadedWithEmptyTransitionsToEmpty() {
         var state = SearchState()
         state.phase = .searching
-        let (newState, _) = searchReducer.reduce(state, .loaded([]), .unused)
+        let (newState, _) = searchReducer.reduce(state, .loaded([]))
         #expect(newState.phase == .empty)
         #expect(newState.albums.isEmpty)
     }
@@ -36,7 +36,7 @@ struct SearchReducerTests {
     @Test func failedTransitionsToFailed() {
         var state = SearchState()
         state.phase = .searching
-        let (newState, _) = searchReducer.reduce(state, .failed, .unused)
+        let (newState, _) = searchReducer.reduce(state, .failed)
         #expect(newState.phase == .failed)
     }
 
@@ -46,7 +46,7 @@ struct SearchReducerTests {
         state.albums = [
             Album(id: "1", type: "album", title: "Test", images: [], artists: [], url: "", externalUrls: nil)
         ]
-        let (newState, _) = searchReducer.reduce(state, .reset, .unused)
+        let (newState, _) = searchReducer.reduce(state, .reset)
         #expect(newState.phase == .idle)
         #expect(newState.albums.isEmpty)
     }

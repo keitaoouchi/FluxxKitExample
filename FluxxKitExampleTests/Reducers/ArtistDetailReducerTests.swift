@@ -8,7 +8,7 @@ struct ArtistDetailReducerTests {
     @Test func fetchAllTransitionsToLoading() {
         let state = ArtistDetailState()
         let artist = Artist(id: "1", name: "Test", url: "https://api.spotify.com/v1/artists/1", externalUrls: nil, images: nil)
-        let (newState, effect) = artistDetailReducer.reduce(state, .fetchAll(artist: artist), .unused)
+        let (newState, effect) = artistDetailReducer.reduce(state, .fetchAll(artist: artist))
         #expect(newState.imagesPhase == .loading)
         #expect(newState.releasesPhase == .loading)
         #expect(newState.relatedArtistsPhase == .loading)
@@ -20,7 +20,7 @@ struct ArtistDetailReducerTests {
     @Test func imagesLoadedUpdatesState() {
         let state = ArtistDetailState()
         let images = [SpotifyImage(url: "https://example.com/img.jpg", height: 640, width: 640)]
-        let (newState, _) = artistDetailReducer.reduce(state, .imagesLoaded(images), .unused)
+        let (newState, _) = artistDetailReducer.reduce(state, .imagesLoaded(images))
         #expect(newState.imagesPhase == .loaded)
         #expect(newState.images.count == 1)
     }
@@ -32,7 +32,7 @@ struct ArtistDetailReducerTests {
             Album(id: "2", type: "single", title: "Single 1", images: [], artists: [], url: "", externalUrls: nil),
             Album(id: "3", type: "album", title: "Album 2", images: [], artists: [], url: "", externalUrls: nil),
         ]
-        let (newState, _) = artistDetailReducer.reduce(state, .releasesLoaded(releases), .unused)
+        let (newState, _) = artistDetailReducer.reduce(state, .releasesLoaded(releases))
         #expect(newState.releasesPhase == .loaded)
         #expect(newState.albums.count == 2)
         #expect(newState.singles.count == 1)
@@ -41,26 +41,26 @@ struct ArtistDetailReducerTests {
     @Test func relatedArtistsLoadedUpdatesState() {
         let state = ArtistDetailState()
         let artists = [Artist(id: "2", name: "Related", url: "", externalUrls: nil, images: nil)]
-        let (newState, _) = artistDetailReducer.reduce(state, .relatedArtistsLoaded(artists), .unused)
+        let (newState, _) = artistDetailReducer.reduce(state, .relatedArtistsLoaded(artists))
         #expect(newState.relatedArtistsPhase == .loaded)
         #expect(newState.relatedArtists.count == 1)
     }
 
     @Test func imagesFailed() {
         let state = ArtistDetailState()
-        let (newState, _) = artistDetailReducer.reduce(state, .imagesFailed, .unused)
+        let (newState, _) = artistDetailReducer.reduce(state, .imagesFailed)
         #expect(newState.imagesPhase == .failed)
     }
 
     @Test func releasesFailed() {
         let state = ArtistDetailState()
-        let (newState, _) = artistDetailReducer.reduce(state, .releasesFailed, .unused)
+        let (newState, _) = artistDetailReducer.reduce(state, .releasesFailed)
         #expect(newState.releasesPhase == .failed)
     }
 
     @Test func relatedArtistsFailed() {
         let state = ArtistDetailState()
-        let (newState, _) = artistDetailReducer.reduce(state, .relatedArtistsFailed, .unused)
+        let (newState, _) = artistDetailReducer.reduce(state, .relatedArtistsFailed)
         #expect(newState.relatedArtistsPhase == .failed)
     }
 }

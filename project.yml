@@ -8,7 +8,7 @@ options:
 packages:
   FluxxKit:
     url: https://github.com/keitaoouchi/FluxxKit
-    branch: feature/v2
+    from: "2.0.0"
   SnapshotTesting:
     url: https://github.com/pointfreeco/swift-snapshot-testing
     from: "1.17.0"

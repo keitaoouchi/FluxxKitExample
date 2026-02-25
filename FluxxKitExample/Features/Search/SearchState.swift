@@ -20,7 +20,7 @@ enum SearchAction: ActionType {
     case reset
 }
 
-let searchReducer = LocalReducer<SearchState, SearchAction> { state, action in
+let searchReducer = Reducer<SearchState, SearchAction> { state, action in
     switch action {
     case .search(let keyword):
         var s = state

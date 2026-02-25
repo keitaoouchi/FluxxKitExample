@@ -6,19 +6,19 @@ import FluxxKit
 
 /// A reducer that returns the state unchanged and produces no effects.
 /// Used in snapshot tests to prevent `.onAppear` dispatches from modifying state.
-let noOpSearchReducer = LocalReducer<SearchState, SearchAction> { state, _ in
+let noOpSearchReducer = Reducer<SearchState, SearchAction> { state, _ in
     (state, .none)
 }
 
-let noOpAlbumDetailReducer = LocalReducer<AlbumDetailState, AlbumDetailAction> { state, _ in
+let noOpAlbumDetailReducer = Reducer<AlbumDetailState, AlbumDetailAction> { state, _ in
     (state, .none)
 }
 
-let noOpArtistDetailReducer = LocalReducer<ArtistDetailState, ArtistDetailAction> { state, _ in
+let noOpArtistDetailReducer = Reducer<ArtistDetailState, ArtistDetailAction> { state, _ in
     (state, .none)
 }
 
-let noOpTrackPlayerReducer = LocalReducer<TrackPlayerState, TrackPlayerAction> { state, _ in
+let noOpTrackPlayerReducer = Reducer<TrackPlayerState, TrackPlayerAction> { state, _ in
     (state, .none)
 }
 

@@ -29,7 +29,7 @@ enum TrackPlayerAction: ActionType {
     case playbackEnded
 }
 
-let trackPlayerReducer = LocalReducer<TrackPlayerState, TrackPlayerAction> { state, action in
+let trackPlayerReducer = Reducer<TrackPlayerState, TrackPlayerAction> { state, action in
     switch action {
     case .play(let track):
         var s = state

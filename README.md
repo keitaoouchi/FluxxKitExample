@@ -1,6 +1,6 @@
 # FluxxKitExample
 
-A Spotify client demonstrating [FluxxKit v2](https://github.com/keitaoouchi/FluxxKit/tree/feature/v2) with SwiftUI.
+A Spotify client demonstrating [FluxxKit 2.0.0](https://github.com/keitaoouchi/FluxxKit) with SwiftUI.
 
 ## Stack
 

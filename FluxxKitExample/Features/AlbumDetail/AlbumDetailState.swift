@@ -18,7 +18,7 @@ enum AlbumDetailAction: ActionType {
     case failed
 }
 
-let albumDetailReducer = LocalReducer<AlbumDetailState, AlbumDetailAction> { state, action in
+let albumDetailReducer = Reducer<AlbumDetailState, AlbumDetailAction> { state, action in
     switch action {
     case .fetchTracks(let albumId):
         var s = state

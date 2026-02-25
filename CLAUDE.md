@@ -2,124 +2,75 @@
 
 ## Overview
 
-FluxxKit v2 の Real World Example アプリ。Spotify クライアントとして、OAuth 認証・アルバム検索・アルバム詳細・アーティスト詳細・トラック再生の機能を持つ。
+A real-world example app for FluxxKit 2.0.0. Works as a Spotify client with OAuth authentication, album search, album detail, artist detail, and track preview playback.
 
 ## Stack
 
-| 項目 | 値 |
-|------|----|
+| Item | Value |
+|------|-------|
 | Swift | 6.0 (strict concurrency) |
 | iOS | 17+ |
 | UI | SwiftUI |
-| Architecture | FluxxKit 2.x (`Store` / `LocalReducer` / `Effect`) |
+| Architecture | FluxxKit 2.0.0 (`Store` / `Reducer` / `Effect`) |
 | Reactive | Swift Concurrency + Observation framework |
-| Dependency Mgmt | SPM (XcodeGen でプロジェクト生成) |
+| Dependency Mgmt | SPM (project generated via XcodeGen) |
 | HTTP | URLSession (async/await) |
 | JSON | Codable |
 | Image | AsyncImage |
-| Keychain | Security framework 直接利用 |
-| Testing | Swift Testing (`@Suite`, `@Test`, `#expect`) |
-
-## FluxxKit v2 API
-
-ソース: `github.com/keitaoouchi/FluxxKit` branch `feature/v2`
-
-### Core Types
-
-- **`StateType`** — `protocol StateType: Sendable {}`
-- **`ActionType`** — `protocol ActionType: Sendable {}`
-- **`Effect<Action>`** — `.none` / `.run(non-throwing async closure)` / `.many([Effect])`
-- **`Reducer<State, Action, GlobalAction>`** — struct。`reduce: (State, Action, Relay<GlobalAction>) -> (State, Effect<Action>)`
-- **`LocalReducer<State, Action>`** — `Reducer<State, Action, Never>` の typealias。init は `(State, Action) -> (State, Effect<Action>)`
-- **`Store<State, Action>`** — `@Observable @MainActor final class`。`state` は `public private(set)`
-- **`Relay<Action>`** — 子Store → 親Store ブリッジ。本プロジェクトでは `Relay<Never>.unused` のみ使用
-
-### Important Notes
-
-- `Effect.run` のクロージャは **non-throwing**。API 呼び出し等は `do/catch` で囲む必要がある
-- `Reducer.reduce` は 3 引数 `(State, Action, Relay<GlobalAction>)`。テストでは `.unused` を渡す
-- Store は `@MainActor`。`@Sendable` クロージャから `dispatch` する場合は `await` が必要
-
-## Project Structure
-
-```
-project.yml                          # XcodeGen 設定
-FluxxKitExample/
-  App.swift                          # @main entry point
-  ContentView.swift                  # 認証分岐 + TrackPlayer overlay
-  Models/
-    ExternalUrls.swift               # Codable shared type
-    SpotifyImage.swift               # 画像モデル (SwiftUI Image との衝突回避)
-    Artist.swift                     # Identifiable, Hashable, Codable
-    Album.swift                      # Identifiable, Hashable, Codable
-    Track.swift                      # formattedDuration computed property あり
-    APIError.swift                   # .requestError / .parseError / .unauthorized
-  API/
-    KeychainHelper.swift             # Security framework ラッパー (enum, static methods)
-    Authentication.swift             # @Observable @MainActor, Keychain 永続化
-    SpotifyAPI.swift                 # URLSession async/await, 5 endpoints
-  Features/
-    Auth/OAuthView.swift             # ASWebAuthenticationSession + Implicit Grant
-    Search/
-      SearchState.swift              # State + Action + Reducer
-      SearchView.swift               # NavigationStack + .searchable
-      AlbumCardView.swift            # Album 行表示
-    AlbumDetail/
-      AlbumDetailState.swift         # State + Action + Reducer
-      AlbumDetailView.swift          # Cover + artist link + track list
-      TrackRow.swift                 # Play indicator 付きトラック行
-    ArtistDetail/
-      ArtistDetailState.swift        # Effect.many で 3 並列 API 呼び出し
-      ArtistDetailView.swift         # Artist header + sections
-      AlbumGridView.swift            # 横スクロール album grid
-      RelatedArtistGridView.swift    # 横スクロール artist grid
-    TrackPlayer/
-      TrackPlayerState.swift         # play/pause/toggle/stop + visibility
-      TrackPlayerView.swift          # Bottom bar (56pt, .ultraThinMaterial)
-      AudioPlayer.swift              # AVPlayer ラッパー (NotificationCenter async)
-  Shared/
-    Theme.swift                      # Color.spotifyGreen, Color.spotifyBlack
-    LoadingStateView.swift           # 汎用 loading/empty/failed
-FluxxKitExampleTests/
-  TestHelpers.swift                  # fixture JSON ローダー
-  Models/
-    AlbumDecodingTests.swift
-    ArtistDecodingTests.swift
-    TrackDecodingTests.swift
-  Reducers/
-    SearchReducerTests.swift
-    AlbumDetailReducerTests.swift
-    ArtistDetailReducerTests.swift
-    TrackPlayerReducerTests.swift
-fixtures/                            # Spotify API レスポンスの JSON fixtures
-```
+| Keychain | Security framework directly |
+| Testing | Swift Testing (`@Suite`, `@Test`, `#expect`), swift-snapshot-testing |
 
 ## Build & Run
 
 ```bash
-# プロジェクト生成 (初回 & project.yml 変更時)
+# Generate project (first time & after project.yml changes)
 xcodegen generate
 
-# ビルド
+# Build
 xcodebuild build -scheme FluxxKitExample -destination 'platform=iOS Simulator,name=iPhone 16'
 
-# テスト
+# Test
 xcodebuild test -scheme FluxxKitExample -destination 'platform=iOS Simulator,name=iPhone 16'
 ```
 
 ## Conventions
 
-- 各 Feature は State / Action / Reducer / View を同ディレクトリにまとめる
-- Reducer はトップレベル `let` 定数 (`let searchReducer = LocalReducer<...> { ... }`)
-- Effect.run 内は `do/catch` で非同期処理をラップ
-- TrackPlayer Store は App ルートで `@State` → `.environment()` で全画面共有
-- Navigation は `NavigationStack` + value-based `.navigationDestination(for:)`
-- テストは Swift Testing (`@Suite`, `@Test`, `#expect`)
-- Reducer テストは純粋関数テスト: `reducer.reduce(state, action, .unused)`
+### Feature structure
+
+- Each feature lives under `Features/<FeatureName>/` with State, Action, Reducer, and View together
+- `*State.swift` co-locates `State` (struct, StateType) + `Action` (enum, ActionType) + `Reducer`
+- Reducer is defined as a top-level `let` constant (`let searchReducer = Reducer<SearchState, SearchAction> { state, action in ... }`)
+- View owns its Store via `@State private var store = Store(initialState: ..., reducer: ...)`
+
+### Effects
+
+- Side effects (API calls etc.) are expressed with `Effect.run { dispatch in ... }`
+- The `Effect.run` closure is non-throwing, so wrap async work in `do/catch` inside
+- Use `Effect.many([.run { ... }, .run { ... }])` for parallel async operations (see ArtistDetail)
+
+### Store sharing
+
+- Feature-local Stores are owned by their View via `@State`
+- App-wide Stores (e.g. TrackPlayer) are held at the App root via `@State` and distributed with `.environment()`
+
+### Navigation
+
+- `NavigationStack` with value-based `.navigationDestination(for:)`
+
+### Testing
+
+- Uses Swift Testing (`@Suite`, `@Test`, `#expect`)
+- Reducer tests are pure function tests: `let (newState, effect) = reducer.reduce(state, action)`
+- Model decoding tests load JSON from `fixtures/` via `TestHelpers.swift`
+- Snapshot tests use [swift-snapshot-testing](https://github.com/pointfreeco/swift-snapshot-testing) with `.image(on: .iPhone13)`
+- Snapshot tests inject a no-op Reducer (returns state unchanged) to prevent `.onAppear` side effects
+- Helpers and mock fixtures live in `SnapshotTestHelpers.swift`
+- Reference images are stored under `__Snapshots__/` inside each snapshot test directory
 
 ## Spotify OAuth
 
 - Client ID: `57e837fb225048c286c07d06bd236631`
-- Redirect URI: `https://github.com/keitaoouchi/FluxxKitExample`
-- Flow: Implicit Grant (URL fragment から access_token 取得)
-- `ASWebAuthenticationSession` + `prefersEphemeralWebBrowserSession: true`
+- Redirect URI: `fluxxkitexample://callback`
+- Callback URL Scheme: `fluxxkitexample`
+- Flow: Authorization Code Flow with PKCE (S256)
+- `ASWebAuthenticationSession` with `prefersEphemeralWebBrowserSession: true`

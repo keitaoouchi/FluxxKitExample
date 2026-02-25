@@ -28,7 +28,7 @@ enum ArtistDetailAction: ActionType {
     case relatedArtistsFailed
 }
 
-let artistDetailReducer = LocalReducer<ArtistDetailState, ArtistDetailAction> { state, action in
+let artistDetailReducer = Reducer<ArtistDetailState, ArtistDetailAction> { state, action in
     switch action {
     case .fetchAll(let artist):
         var s = state
