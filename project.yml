@@ -1,0 +1,49 @@
+name: FluxxKitExample
+options:
+  bundleIdPrefix: com.keitaoouchi
+  deploymentTarget:
+    iOS: "17.0"
+  xcodeVersion: "16.0"
+
+packages:
+  FluxxKit:
+    url: https://github.com/keitaoouchi/FluxxKit
+    branch: feature/v2
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_STRICT_CONCURRENCY: complete
+
+targets:
+  FluxxKitExample:
+    type: application
+    platform: iOS
+    sources:
+      - path: FluxxKitExample
+    dependencies:
+      - package: FluxxKit
+    settings:
+      base:
+        INFOPLIST_GENERATION_MODE: GeneratedFile
+        MARKETING_VERSION: "2.0.0"
+        CURRENT_PROJECT_VERSION: "1"
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: "UIInterfaceOrientationPortrait"
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+
+  FluxxKitExampleTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: FluxxKitExampleTests
+      - path: fixtures
+        buildPhase: resources
+        type: folder
+    dependencies:
+      - target: FluxxKitExample
+    settings:
+      base:
+        INFOPLIST_GENERATION_MODE: GeneratedFile
+        GENERATE_INFOPLIST_FILE: YES
