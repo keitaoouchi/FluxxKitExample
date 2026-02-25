@@ -2,8 +2,12 @@ import SwiftUI
 import FluxxKit
 
 struct SearchView: View {
-    @State private var store = Store(initialState: SearchState(), reducer: searchReducer)
+    @State private var store: Store<SearchState, SearchAction>
     @State private var searchText = ""
+
+    init(store: Store<SearchState, SearchAction> = Store(initialState: SearchState(), reducer: searchReducer)) {
+        _store = State(initialValue: store)
+    }
 
     var body: some View {
         NavigationStack {

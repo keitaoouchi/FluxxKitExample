@@ -9,15 +9,20 @@
 /* Begin PBXBuildFile section */
 		08592336EEB3D3C9EDD3D3EA /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0925175AF1754F9C2274CF /* SearchView.swift */; };
 		0CC2A2123B1A56961142DFFF /* AlbumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB08E27BFB15653846A119D8 /* AlbumDetailView.swift */; };
+		1E8751FC8444C1746227451D /* ArtistDetailSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95252F5F1E2D0CB62F92EC3A /* ArtistDetailSnapshotTests.swift */; };
 		202778D44E7A19AC98D9032B /* SpotifyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D013BCEC8437881AF9E3CE11 /* SpotifyAPI.swift */; };
 		2391D9C4BFA3AC6B6DB92092 /* AlbumDetailReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC4CD7808D4A1C6BCAA972 /* AlbumDetailReducerTests.swift */; };
 		244C098C958C3C92D4CF8433 /* ArtistDetailState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3A230569406D9FCF1FEDB /* ArtistDetailState.swift */; };
 		265EDD4EF412EB3E64D7E511 /* SpotifyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7F7C7DD3272F4F6DDD4E2 /* SpotifyImage.swift */; };
+		29F0E4A8525EA5F37DEA73EA /* SnapshotTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97C5FAC716ECF91DC0E8547 /* SnapshotTestHelpers.swift */; };
 		3C8BE649D3ED46CE9A4D005A /* AlbumDecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D8833851BF45141F8E6E58 /* AlbumDecodingTests.swift */; };
 		41F6A5856712A93797EF66BE /* TrackPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF99E2C8D8B8588B5F5D5F4 /* TrackPlayerView.swift */; };
 		43188B2A092883190A77B129 /* TrackPlayerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C9882E13887F2DBD2E7174 /* TrackPlayerState.swift */; };
 		52C59A9A2D8A426DD9750037 /* ArtistDetailReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F12417CD27C9BCAC57EC0D3 /* ArtistDetailReducerTests.swift */; };
 		55C39200909C32BA4EDEBB8D /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5781CB9CE0D18D1BF8FBD25 /* AudioPlayer.swift */; };
+		565C681111D93E56E5EEEE5D /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = AEB9B148473141BEB2111165 /* SnapshotTesting */; };
+		602275AD944DAABBC93C4DF9 /* AlbumDetailSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C343CDA1A4842CFE53DE76 /* AlbumDetailSnapshotTests.swift */; };
+		69709C22100080EA9D3212B6 /* SearchSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCE16ACA59640380A95532B /* SearchSnapshotTests.swift */; };
 		6D55A710BEE8DE7358DC8E8A /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C062128F04DCDF424A62FF /* KeychainHelper.swift */; };
 		702110D40146980B511B4389 /* fixtures in Resources */ = {isa = PBXBuildFile; fileRef = 42A4855F504058D0BC91E410 /* fixtures */; };
 		7358E9381810EE406CF82C9F /* ExternalUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1405F2917D4604D76A55E7B7 /* ExternalUrls.swift */; };
@@ -77,11 +82,14 @@
 		78CC4CD7808D4A1C6BCAA972 /* AlbumDetailReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailReducerTests.swift; sourceTree = "<group>"; };
 		7C1FBF141EB7F178AF12773C /* SearchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchState.swift; sourceTree = "<group>"; };
 		7E730D91D1AE68FB82A10013 /* AlbumGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumGridView.swift; sourceTree = "<group>"; };
+		7FCE16ACA59640380A95532B /* SearchSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSnapshotTests.swift; sourceTree = "<group>"; };
 		84D8833851BF45141F8E6E58 /* AlbumDecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDecodingTests.swift; sourceTree = "<group>"; };
+		95252F5F1E2D0CB62F92EC3A /* ArtistDetailSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailSnapshotTests.swift; sourceTree = "<group>"; };
 		9B72609E8A62A02EEDDD2B7E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9DE6E7B982A6D7B58079DDA7 /* FluxxKitExample.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = FluxxKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E3A230569406D9FCF1FEDB /* ArtistDetailState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailState.swift; sourceTree = "<group>"; };
 		A7904FDAB72F0EF42FBA904D /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		A97C5FAC716ECF91DC0E8547 /* SnapshotTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTestHelpers.swift; sourceTree = "<group>"; };
 		ACD42EDDB5CD802F22192221 /* TrackDecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDecodingTests.swift; sourceTree = "<group>"; };
 		BB08E27BFB15653846A119D8 /* AlbumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailView.swift; sourceTree = "<group>"; };
 		BB396247131A4EE706DB2CE5 /* RelatedArtistGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedArtistGridView.swift; sourceTree = "<group>"; };
@@ -95,10 +103,19 @@
 		D7C9882E13887F2DBD2E7174 /* TrackPlayerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackPlayerState.swift; sourceTree = "<group>"; };
 		DA052FE4B8DAD53B4EBEEA10 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		E0A461FB82707CDD51F16788 /* LoadingStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStateView.swift; sourceTree = "<group>"; };
+		E3C343CDA1A4842CFE53DE76 /* AlbumDetailSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailSnapshotTests.swift; sourceTree = "<group>"; };
 		FE72D9DC19B6C3C10D0C3F21 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2DD427C66869820A90A80C30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				565C681111D93E56E5EEEE5D /* SnapshotTesting in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EB01046387E317547803ED81 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -163,6 +180,7 @@
 				32279C73AA34CC425CC61F09 /* TestHelpers.swift */,
 				2DCB358FB28EA2127BAC87F2 /* Models */,
 				4ADD4159F717C023FB7DB6BB /* Reducers */,
+				976ADB96A8F57B52A6DFFAA4 /* Snapshots */,
 			);
 			path = FluxxKitExampleTests;
 			sourceTree = "<group>";
@@ -248,6 +266,17 @@
 			path = ArtistDetail;
 			sourceTree = "<group>";
 		};
+		976ADB96A8F57B52A6DFFAA4 /* Snapshots */ = {
+			isa = PBXGroup;
+			children = (
+				E3C343CDA1A4842CFE53DE76 /* AlbumDetailSnapshotTests.swift */,
+				95252F5F1E2D0CB62F92EC3A /* ArtistDetailSnapshotTests.swift */,
+				7FCE16ACA59640380A95532B /* SearchSnapshotTests.swift */,
+				A97C5FAC716ECF91DC0E8547 /* SnapshotTestHelpers.swift */,
+			);
+			path = Snapshots;
+			sourceTree = "<group>";
+		};
 		AA3A5B2ED31A769723014575 = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +305,7 @@
 			buildPhases = (
 				FA429F625311C654E70F3B46 /* Sources */,
 				3340BE50FBF9267CC3FC462E /* Resources */,
+				2DD427C66869820A90A80C30 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -284,6 +314,7 @@
 			);
 			name = FluxxKitExampleTests;
 			packageProductDependencies = (
+				AEB9B148473141BEB2111165 /* SnapshotTesting */,
 			);
 			productName = FluxxKitExampleTests;
 			productReference = 33D0AEBD390F728052B7A620 /* FluxxKitExampleTests.xctest */;
@@ -329,6 +360,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				19757A1DFBC1DD4FE996F793 /* XCRemoteSwiftPackageReference "FluxxKit" */,
+				0CF5AFA3C577689357C753A0 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 			);
 			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
@@ -392,9 +424,13 @@
 			files = (
 				3C8BE649D3ED46CE9A4D005A /* AlbumDecodingTests.swift in Sources */,
 				2391D9C4BFA3AC6B6DB92092 /* AlbumDetailReducerTests.swift in Sources */,
+				602275AD944DAABBC93C4DF9 /* AlbumDetailSnapshotTests.swift in Sources */,
 				B8C5AD8D76C6F3283A629458 /* ArtistDecodingTests.swift in Sources */,
 				52C59A9A2D8A426DD9750037 /* ArtistDetailReducerTests.swift in Sources */,
+				1E8751FC8444C1746227451D /* ArtistDetailSnapshotTests.swift in Sources */,
 				FC018232B29056B740465DF2 /* SearchReducerTests.swift in Sources */,
+				69709C22100080EA9D3212B6 /* SearchSnapshotTests.swift in Sources */,
+				29F0E4A8525EA5F37DEA73EA /* SnapshotTestHelpers.swift in Sources */,
 				97083C59CFDD5D80ADE4B7E0 /* TestHelpers.swift in Sources */,
 				FE1DF2FBB0DCFD5B52626232 /* TrackDecodingTests.swift in Sources */,
 				CD60BFC363CD926F0B50557D /* TrackPlayerReducerTests.swift in Sources */,
@@ -648,6 +684,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0CF5AFA3C577689357C753A0 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.17.0;
+			};
+		};
 		19757A1DFBC1DD4FE996F793 /* XCRemoteSwiftPackageReference "FluxxKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/keitaoouchi/FluxxKit";
@@ -663,6 +707,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 19757A1DFBC1DD4FE996F793 /* XCRemoteSwiftPackageReference "FluxxKit" */;
 			productName = FluxxKit;
+		};
+		AEB9B148473141BEB2111165 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0CF5AFA3C577689357C753A0 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

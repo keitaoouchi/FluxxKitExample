@@ -9,6 +9,9 @@ packages:
   FluxxKit:
     url: https://github.com/keitaoouchi/FluxxKit
     branch: feature/v2
+  SnapshotTesting:
+    url: https://github.com/pointfreeco/swift-snapshot-testing
+    from: "1.17.0"
 
 settings:
   base:
@@ -44,6 +47,7 @@ targets:
         type: folder
     dependencies:
       - target: FluxxKitExample
+      - package: SnapshotTesting
     settings:
       base:
         INFOPLIST_GENERATION_MODE: GeneratedFile

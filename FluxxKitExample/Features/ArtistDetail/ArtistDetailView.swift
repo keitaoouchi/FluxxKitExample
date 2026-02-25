@@ -3,7 +3,12 @@ import FluxxKit
 
 struct ArtistDetailView: View {
     let artist: Artist
-    @State private var store = Store(initialState: ArtistDetailState(), reducer: artistDetailReducer)
+    @State private var store: Store<ArtistDetailState, ArtistDetailAction>
+
+    init(artist: Artist, store: Store<ArtistDetailState, ArtistDetailAction> = Store(initialState: ArtistDetailState(), reducer: artistDetailReducer)) {
+        self.artist = artist
+        _store = State(initialValue: store)
+    }
 
     var body: some View {
         ScrollView {

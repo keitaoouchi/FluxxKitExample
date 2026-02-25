@@ -3,8 +3,13 @@ import FluxxKit
 
 struct AlbumDetailView: View {
     let album: Album
-    @State private var store = Store(initialState: AlbumDetailState(), reducer: albumDetailReducer)
+    @State private var store: Store<AlbumDetailState, AlbumDetailAction>
     @Environment(Store<TrackPlayerState, TrackPlayerAction>.self) private var trackPlayerStore
+
+    init(album: Album, store: Store<AlbumDetailState, AlbumDetailAction> = Store(initialState: AlbumDetailState(), reducer: albumDetailReducer)) {
+        self.album = album
+        _store = State(initialValue: store)
+    }
 
     var body: some View {
         List {
